@@ -78,7 +78,7 @@ class AmazonImport(PackerPostProcessor):
         'ami_groups': ([str], False),
         'ami_kms_key': (str, False),
         'ami_name': (str, False),
-        'ami_users': ([str], False),
+        'ami_users': (validator.jagged_array(str), False),
         'custom_endpoint_ec2': (str, False),
         'format': (str, False),
         'insecure_skip_tls_verify': (validator.boolean, False),
